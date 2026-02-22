@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZAWQ | Product</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./product.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="navbar"></div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="breadcrumb-box col-12-lg col-md-12 col-sm-12">
+                    <ol class="breadcrumb-list">
+                        <li><a href="../index/index.html">Home</a></li>
+                        <li><a href="../shop/shop.html">Shop</a></li>
+                        <li id="breadcrumb-gender"></li>
+                        <li id="breadcrumb-category"></li>
+                        <li id="breadcrumb-title"></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row gx-5 align-items-start">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="product-image-box">
+                        <img id="product-image" src="" alt="product image">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 product-details">
+                    <p id="product-series" class="product-series"></p>
+                    <h1 id="product-title" class="product-title"></h1>
+                    <p id="product-price" class="product-price"></p>
+                    <p id="product-description" class="product-description"></p>
+
+                    <div class="size-header">
+                        <span class="size-label">SIZE</span>
+                        <span class="size-chart-link">SIZE CHART</span>
+                    </div>
+                    <div id="size-options" class="size-options"></div>
+                    <p id="size-error" style="display:none; color:#c0392b; font-size:0.8rem; margin-top:0.5rem;">Please
+                        select a size.</p>
+
+                    <div class="product-actions">
+                        <button class="btn-add-to-bag">ADD TO CART</button>
+                        <button class="btn-add-view-bag">ADD & VIEW CART</button>
+                    </div>
+                    <p id="login-prompt" style="display:none;" class="login-prompt">
+                        Please <a href="../Login/login.html">sign in</a> to add items to your cart.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-divider"></div>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/components.js"></script>
+    <script src="./product.js"></script>
+</body>
+
+</html>

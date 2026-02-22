@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZAWQ — New Arrivals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="./new-arrivals.css" />
+</head>
+
+<body>
+  <div class="z-wrapper">
+    <!------------------------------------ NAVBAR ------------------------------------------------>
+    <div id="navbar"></div>
+
+    <!------------------------------------ MAIN ------------------------------------------------>
+    <main class="z-main">
+      <div class="container-fluid px-4 px-lg-5">
+        <!-- Breadcrumb -->
+        <nav class="z-breadcrumb small text-muted" aria-label="breadcrumb">
+          <a href="../index/index.html" class="text-muted text-decoration-none">
+            Home
+          </a>
+          <span class="mx-2">›</span>
+          <span>New Arrivals</span>
+        </nav>
+
+        <!-- Header -->
+        <div class="z-na-head">
+          <div>
+            <div class="z-na-kicker">THIS WEEK</div>
+            <h1 class="z-title mb-0">New Arrivals</h1>
+            <p class="z-na-sub">
+              Fresh drops curated for clean silhouettes and everyday wear.
+            </p>
+          </div>
+          <!-- Featured Section -->
+          <section class="z-na-feature mt-4">
+            <div class="z-na-feature-card">
+              <div class="z-na-feature-kicker">EDITOR’S PICK</div>
+              <div class="z-na-feature-title">Soft Layers, Clean Lines</div>
+              <div class="z-na-feature-desc">
+                Neutral tones and structured essentials designed to mix
+                effortlessly.
+              </div>
+              <a class="z-na-feature-link" href="../shop-products/shop-products.html?cat=men">
+                SHOP THE DROP →
+              </a>
+            </div>
+
+            <div class="z-na-feature-img" aria-hidden="true">
+              <img class="z-na-feature-real" src="../../assets/featured.png" alt="Soft Layers Collection" />
+            </div>
+          </section>
+
+          <!-- Statistics -->
+          <div class="z-na-meta">
+            <div class="z-na-stat">
+              <div class="z-na-stat-num" id="newCount">0</div>
+              <div class="z-na-stat-label">new pieces</div>
+            </div>
+
+            <div class="z-na-divider"></div>
+
+            <div class="z-na-stat">
+              <div class="z-na-stat-num" id="collectionsCount">0</div>
+              <div class="z-na-stat-label">collections</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="z-na-toolbar">
+          <!-- Filter Chips -->
+          <div class="z-na-chips" id="filterChips">
+            <button type="button" class="z-chip is-active" data-filter="all">
+              ALL
+            </button>
+            <button type="button" class="z-chip" data-filter="men">
+              MEN
+            </button>
+            <button type="button" class="z-chip" data-filter="women">
+              WOMEN
+            </button>
+            <button type="button" class="z-chip" data-filter="kids">
+              KIDS
+            </button>
+            <button type="button" class="z-chip" data-filter="unisex">
+              UNISEX
+            </button>
+          </div>
+
+          <!-- Sort Chip -->
+          <div class="z-na-sort">
+            <label class="z-na-sort-label" for="sortSelect">Sort</label>
+
+            <select id="sortSelect" class="z-na-sort-select">
+              <option value="latest" selected>Latest</option>
+              <option value="price-asc">Price: Low → High</option>
+              <option value="price-desc">Price: High → Low</option>
+              <option value="az">Name: A → Z</option>
+              <option value="za">Name: Z → A</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <section class="row g-4 mt-4" id="productsGrid"></section>
+
+        <!-- Coming Soon Cards -->
+        <section class="row g-4 mt-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="z-prod-card">
+              <div class="z-na-coming">Coming Soon</div>
+              <img class="z-na-miniimg" src="../../assets/coming soon.jpeg" alt="Minimal Tote — Stone" />
+
+              <div class="z-prod-meta">
+                <div class="z-prod-series">NEW DROP</div>
+                <div class="z-prod-name-row">
+                  <div class="z-prod-name">Stay Tuned</div>
+                  <div class="z-prod-price">—</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="z-prod-card">
+              <div class="z-na-coming">Coming Soon</div>
+              <img class="z-na-miniimg" src="../../assets/coming soon.jpeg" alt="Minimal Tote — Stone" />
+
+              <div class="z-prod-meta">
+                <div class="z-prod-series">NEW DROP</div>
+                <div class="z-prod-name-row">
+                  <div class="z-prod-name">Stay Tuned</div>
+                  <div class="z-prod-price">—</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!------------------------------------ FOOTER ------------------------------------------------>
+    <div id="footer"></div>
+  </div>
+
+  <!------------------------------------ JS ------------------------------------------------>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../scripts/products.js"></script>
+  <script src="../../scripts/components.js"></script>
+</body>
+
+</html>

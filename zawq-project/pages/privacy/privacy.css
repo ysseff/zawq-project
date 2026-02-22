@@ -1,0 +1,22 @@
+.z-policy-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 40px;
+  background: #fafafa;
+}
+
+.z-policy-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 10px;
+}
+
+.z-policy-card hr {
+  margin: 30px 0;
+  border-color: #eee;
+}
+
+.z-muted {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+}

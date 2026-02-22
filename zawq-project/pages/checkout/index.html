@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ZAWQ | Checkout</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="./checkout.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/styles.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="navbar"></div>
+        </header>
+
+        <main class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="breadcrumb-box col-12">
+                        <ol class="breadcrumb-list">
+                            <li><a href="../index/index.html">Home</a></li>
+                            <li><a href="../bag/index.html">Bag</a></li>
+                            <li>Checkout</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-between align-items-center mb-4">
+                    <span class="page-title col-12">Checkout</span>
+                </div>
+
+                <div class="row mt-2 align-items-start">
+                    <div class="col-lg-7 col-md-12">
+                        <span class="section-label">SHIPPING ADDRESS</span>
+                        <form id="checkout-form" class="checkout-form mt-3" novalidate>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <label class="form-label" for="first-name">First name</label>
+                                    <input type="text" id="first-name" class="form-input" placeholder="Youssef" required>
+                                    <p class="field-error" id="first-name-error">Please enter your first name.</p>
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label" for="last-name">Last name</label>
+                                    <input type="text" id="last-name" class="form-input" placeholder="Mahmoud" required>
+                                    <p class="field-error" id="last-name-error">Please enter your last name.</p>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="address">Address</label>
+                                    <input type="text" id="address" class="form-input" placeholder="123 Main St" required>
+                                    <p class="field-error" id="address-error">Please enter your address.</p>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="address2">Apartment, suite, etc. <span class="optional">(optional)</span></label>
+                                    <input type="text" id="address2" class="form-input" placeholder="Apt 4B">
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label" for="city">City</label>
+                                    <input type="text" id="city" class="form-input" placeholder="Cairo" required>
+                                    <p class="field-error" id="city-error">Please enter your city.</p>
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label" for="zip">Postal code</label>
+                                    <input type="text" id="zip" class="form-input" placeholder="12345" required>
+                                    <p class="field-error" id="zip-error">Please enter your postal code.</p>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="country">Country</label>
+                                    <input type="text" id="country" class="form-input" placeholder="Egypt" required>
+                                    <p class="field-error" id="country-error">Please enter your country.</p>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="phone">Phone number</label>
+                                    <input type="tel" id="phone" class="form-input" placeholder="+20 100 000 0000" required>
+                                    <p class="field-error" id="phone-error">Please enter your phone number.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-4 offset-lg-1 col-md-12 mt-4 mt-lg-0">
+                        <div class="order-summary">
+                            <span class="order-summary-label">ORDER SUMMARY</span>
+                            <div class="order-summary-row">
+                                <span class="order-summary-key">Subtotal</span>
+                                <span id="order-subtotal" class="order-summary-value">—</span>
+                            </div>
+                            <div class="order-summary-row">
+                                <span class="order-summary-key">Shipping</span>
+                                <span class="order-summary-shipping">Calculated at checkout</span>
+                            </div>
+                            <hr class="order-summary-divider">
+                            <p class="order-summary-note">Taxes and shipping will be calculated at checkout. We offer free shipping on orders over $300.</p>
+                            <button id="place-order-btn" class="place-order-btn mt-1">PLACE ORDER</button>
+                            <p id="order-error" class="order-error"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="footer-divider"></div>
+
+<div id="footer"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../../scripts/components.js"></script>
+        <script src="./checkout.js"></script>
+    </body>
+</html>

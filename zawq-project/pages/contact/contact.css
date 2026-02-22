@@ -1,0 +1,29 @@
+.z-muted {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.z-contact-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 36px;
+    background: #fafafa;
+}
+
+.z-input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+.z-btn-dark {
+    background: #111;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

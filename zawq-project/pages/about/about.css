@@ -1,0 +1,167 @@
+/* about page - navbar and footer overrides for dark bg */
+.z-page-about {
+    background: #111;
+}
+
+.z-page-about .z-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.z-page-about .z-navbar a,
+.z-page-about .z-navbar .nav-link,
+.z-page-about .z-navbar .navbar-brand,
+.z-page-about .z-navbar .z-bag-text,
+.z-page-about .z-navbar .nav-auth-btn {
+    color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.z-page-about .z-navbar .nav-link:hover,
+.z-page-about .z-navbar .z-icon-btn:hover,
+.z-page-about .z-navbar .nav-auth-btn:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.z-page-about .z-navbar .dropdown-menu a,
+.z-page-about .z-navbar .dropdown-item {
+    color: #1a1a1a !important;
+}
+
+.z-page-about .z-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2);
+    filter: invert(1);
+}
+
+.z-page-about .z-footer {
+    background: #111 !important;
+    border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.z-page-about .z-footer .z-footer-brand,
+.z-page-about .z-footer .z-copyright,
+.z-page-about .z-footer .z-footer-links a {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.z-page-about .z-footer .z-footer-links a:hover {
+    color: rgba(255, 255, 255, 0.75) !important;
+    opacity: 1 !important;
+}
+
+/* philosophy / our story section */
+.z-philo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 520px;
+}
+
+.z-philo-media {
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
+
+.z-philo-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.z-philo-panel {
+    background: #111;
+    color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+}
+
+.z-philo-inner {
+    width: min(520px, calc(100% - 90px));
+    margin: 0 auto;
+    padding: 74px 0;
+}
+
+.z-philo-kicker {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 18px;
+}
+
+.z-philo-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 22px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.z-philo-title em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.z-philo-text {
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0 0 16px;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.z-philo-text--muted {
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 6px;
+}
+
+.z-philo-btn {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 26px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+@media (hover: hover) {
+    .z-philo-btn:hover {
+        border-color: rgba(255, 255, 255, 0.42);
+    }
+}
+
+.z-philo-stats {
+    margin-top: 36px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.z-stat-num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.z-stat-label {
+    margin-top: 6px;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}

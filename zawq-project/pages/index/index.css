@@ -1,0 +1,631 @@
+/* Home Page */
+
+/* hero section */
+.z-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+}
+
+.z-hero-bg {
+  position: relative;
+  width: 100%;
+  height: 830px;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  filter: brightness(0.8);
+}
+
+.z-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 24px 0 88px;
+  pointer-events: none;
+}
+
+.z-hero-content {
+  pointer-events: auto;
+  max-width: 420px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* hero typography */
+.z-hero-season {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 22px;
+}
+
+.z-hero-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 70px;
+  letter-spacing: 0.24em;
+  margin: 0;
+  line-height: 1.05;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.z-hero-subtitle {
+  margin-top: 14px;
+  font-size: 13px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.z-hero-desc {
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* CTA */
+.z-hero-cta {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 22px;
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+.z-hero-cta:hover {
+  text-decoration: none;
+}
+
+/* Scroll label */
+.z-hero-scroll {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.z-hero-line {
+  width: 58px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.35);
+  display: inline-block;
+}
+
+/* scrolling text strip at the bottom of the hero */
+.z-hero-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42px;
+  background: rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.z-strip-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: zLoop var(--zLoopDur, 20s) linear infinite;
+}
+
+.z-strip-group {
+  display: flex;
+}
+
+.z-strip-item {
+  flex: 0 0 auto;
+  padding: 0 40px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+  position: relative;
+}
+
+.z-strip-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 14px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes zLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--zLoopDistance, 300px)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .z-strip-track {
+    animation: none;
+  }
+}
+
+/* ---- collection section ---- */
+.z-collection {
+  background: #f6f6f6;
+  padding: 90px 0 100px;
+}
+
+.z-collection-inner {
+  width: min(1200px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.z-collection-head {
+  margin-bottom: 56px;
+}
+
+.z-collection-kicker {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 14px;
+}
+
+.z-collection-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* grid + cards */
+.z-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 52px;
+}
+
+.z-col-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.z-col-card:visited {
+  color: inherit;
+}
+
+.z-col-img {
+  background: #ededed;
+  height: 320px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.z-col-img img {
+  max-width: 72%;
+  max-height: 72%;
+  object-fit: contain;
+  display: block;
+}
+
+.z-col-meta {
+  margin-top: 14px;
+}
+
+.z-col-series {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 8px;
+}
+
+.z-col-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.z-col-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.82);
+}
+
+.z-col-price {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+
+@media (hover: hover) {
+  .z-col-card:hover .z-col-img {
+    filter: brightness(0.985);
+  }
+  .z-col-card:hover .z-col-name {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+/* =========================
+   philosophy / our story
+   ========================= */
+.z-philo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.z-philo-media {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.z-philo-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.z-philo-panel {
+  background: #111;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+}
+
+.z-philo-inner {
+  width: min(520px, calc(100% - 90px));
+  margin: 0 auto;
+  padding: 74px 0;
+}
+
+.z-philo-kicker {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 18px;
+}
+
+.z-philo-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.z-philo-title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.z-philo-text {
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.z-philo-text--muted {
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 6px;
+}
+
+.z-philo-btn {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 26px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: transparent;
+}
+
+@media (hover: hover) {
+  .z-philo-btn:hover {
+    border-color: rgba(255, 255, 255, 0.42);
+  }
+}
+
+.z-philo-stats {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.z-stat-num {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.z-stat-label {
+  margin-top: 6px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* newsletter */
+.z-newsletter {
+  background: #f6f6f6;
+  padding: 88px 0 96px;
+}
+
+.z-newsletter-inner {
+  width: min(1200px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.z-news-kicker {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 14px;
+}
+
+.z-news-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 34px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.z-news-title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.z-news-form {
+  display: flex;
+  align-items: stretch;
+  max-width: 520px;
+}
+
+.z-news-input {
+  flex: 1 1 auto;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-right: 0;
+  background: transparent;
+  font-size: 12px;
+  outline: none;
+}
+
+.z-news-input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.z-news-btn {
+  height: 44px;
+  padding: 0 26px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.88);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .z-news-btn:hover {
+    background: rgba(0, 0, 0, 0.95);
+  }
+}
+
+/* transparent navbar - home page only */
+.z-page-home .z-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.z-page-home .z-navbar a,
+.z-page-home .z-navbar .nav-link,
+.z-page-home .z-navbar .navbar-brand {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .z-hero-overlay {
+    padding-left: 24px;
+  }
+  .z-hero-title {
+    font-size: 56px;
+  }
+
+  .z-collection {
+    padding: 70px 0 80px;
+  }
+  .z-collection-title {
+    font-size: 40px;
+  }
+  .z-collection-grid {
+    gap: 32px;
+  }
+
+  .z-philo {
+    grid-template-columns: 1fr;
+  }
+  .z-philo-media {
+    height: 320px;
+  }
+  .z-philo-inner {
+    width: min(640px, calc(100% - 44px));
+    padding: 62px 0;
+  }
+
+  .z-newsletter {
+    padding: 74px 0 82px;
+  }
+  .z-news-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .z-collection-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .z-col-img {
+    height: 340px;
+  }
+  .z-col-img img {
+    max-width: 78%;
+    max-height: 78%;
+  }
+}
+
+@media (max-width: 576px) {
+  .z-hero {
+    height: 520px;
+  }
+  .z-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% 50%;
+  }
+
+  .z-hero-content {
+    max-width: 320px;
+  }
+  .z-hero-cta {
+    width: 220px;
+  }
+
+  .z-collection {
+    padding: 60px 0 70px;
+  }
+  .z-collection-title {
+    font-size: 34px;
+  }
+  .z-collection-inner {
+    width: min(1200px, calc(100% - 36px));
+  }
+
+  .z-philo-media {
+    height: 260px;
+  }
+  .z-philo-title {
+    font-size: 34px;
+  }
+  .z-philo-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .z-newsletter {
+    padding: 60px 0 70px;
+  }
+  .z-news-title {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .z-news-form {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 420px;
+  }
+
+  .z-news-input {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .z-news-btn {
+    width: 180px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .z-hero-content {
+    max-width: 480px;
+  }
+
+  .z-hero-season {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  .z-hero-title {
+    font-size: 82px;
+    letter-spacing: 0.26em;
+  }
+  .z-hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 0.36em;
+  }
+  .z-hero-desc {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .z-hero-cta {
+    height: 44px;
+    padding: 0 26px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  .z-hero-scroll {
+    font-size: 11px;
+    margin-top: 32px;
+  }
+  .z-hero-line {
+    width: 72px;
+  }
+}

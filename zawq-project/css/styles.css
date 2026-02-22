@@ -1,0 +1,322 @@
+/* ZAWQ - main stylesheet */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap");
+
+/* root variables + base styles */
+:root {
+  --ink: #111;
+  --muted: #777;
+  --border: #e9e9e9;
+  --paper: #ffffff;
+  --footer: #f4f4f4;
+
+  --page-x: 120px;
+  --page-top: 40px;
+  --page-bottom: 80px;
+
+  --title-size: 42px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: #fff;
+  color: var(--ink);
+  margin: 0;
+}
+
+.z-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.z-main {
+  flex: 1;
+  padding: var(--page-top) var(--page-x) var(--page-bottom);
+  background: var(--paper);
+}
+
+.z-navbar,
+.z-footer {
+  background: var(--paper);
+}
+
+/* ---- navbar ---- */
+
+.z-navbar {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+  .z-navbar .container {
+    position: relative;
+  }
+
+.brand-logo {
+  height: 24px;
+  width: auto;
+}
+
+.z-brand {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 18px;
+}
+
+.z-navbar .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+@media (min-width: 992px) {
+  .z-navbar .navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+}
+
+.z-navbar .nav-link:hover {
+  opacity: 0.7;
+}
+
+.sale-dot {
+  width: 6px;
+  height: 6px;
+  background: #d24a43;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.z-icons a {
+  text-decoration: none;
+  color: var(--ink);
+  transition: 0.15s ease;
+}
+
+.z-icons a:hover {
+  opacity: 0.6;
+}
+
+.z-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+
+.z-icon-btn:hover {
+  background: #f4f4f4;
+}
+
+.z-bag {
+  width: auto;
+  padding: 0 10px;
+  gap: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.z-bag-text {
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.z-navbar .dropdown-menu {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 10px;
+  min-width: 220px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+}
+
+.z-navbar .dropdown-item {
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.z-navbar .dropdown-item:hover {
+  background: #f4f4f4;
+}
+
+.z-navbar .dropdown-divider {
+  margin: 8px 0;
+  opacity: 0.15;
+}
+
+.z-signout {
+  color: #111;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.z-signout:hover {
+  text-decoration: underline;
+}
+
+.z-auth-menu {
+  min-width: 180px;
+  border: 1px solid #e9e9e9;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.z-auth-menu .dropdown-item {
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1A1A;
+  display: flex;
+  align-items: center;
+}
+
+.z-auth-menu .dropdown-item:hover {
+  background: #f4f4f4;
+}
+
+.z-auth-menu .dropdown-divider {
+  margin: 8px 0;
+}
+
+.z-auth-logout {
+  color: #1A1A1A;
+}
+
+/* breadcrumb + page titles */
+.z-breadcrumb {
+  margin-top: 6px;
+  margin-bottom: 18px;
+  letter-spacing: 0.02em;
+}
+
+.z-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: var(--title-size);
+  margin: 0 0 26px;
+}
+
+/* AUTH BUTTON (Sign in / Sign out) */
+
+.nav-auth-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  height: 44px;
+  padding: 0 12px;
+
+  background: transparent;
+  border: none;
+
+  color: #1A1A1A;
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-auth-btn i {
+  font-size: 20px;
+}
+
+.nav-auth-btn:hover {
+  background: #f4f4f4;
+  color: #1A1A1A;
+}
+
+.nav-auth-text {
+  display: inline-block;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.z-footer {
+  background: var(--paper);
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: #666;
+}
+
+.z-footer-brand {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.z-copyright {
+  font-size: 11px;
+  color: #999;
+}
+
+.z-footer-links a {
+  text-decoration: none;
+  color: #666;
+  margin-right: 18px;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+.z-footer-links a:last-child {
+  margin-right: 0;
+}
+
+.z-footer-links a:hover {
+  opacity: 0.6;
+}
+
+/* responsive - global */
+@media (max-width: 991px) {
+  :root {
+    --page-x: 24px;
+    --title-size: 34px;
+  }
+
+  .z-footer {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .z-navbar .navbar-collapse {
+    padding-top: 12px;
+  }
+
+  .z-navbar .navbar-nav {
+    gap: 8px !important;
+    align-items: flex-start !important;
+  }
+
+  .z-navbar .nav-link {
+    padding: 10px 0;
+  }
+}

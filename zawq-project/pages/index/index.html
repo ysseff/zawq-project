@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZAWQ — New Arrivals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body class="z-page-home">
+  <div class="z-wrapper">
+    <!------------------------------------ NAVBAR ------------------------------------------------>
+  <div id="navbar"></div>
+
+    <!------------------------------------ MAIN ------------------------------------------------>
+    <main>
+      <!----------------- HERO SECTION -------------------------------->
+      <section class="z-hero z-hero--full">
+        <section class="z-hero">
+          <!-- background image -->
+          <img class="z-hero-bg" src="../../assets/zawq.png" alt="ZAWQ hero" />
+
+          <!-- overlay content -->
+          <div class="z-hero-overlay">
+            <div class="z-hero-content">
+              <div class="z-hero-season">WINTER — SPRING 2026</div>
+
+              <h1 class="z-hero-title">ZAWQ</h1>
+              <div class="z-hero-subtitle">NEW COLLECTION</div>
+
+              <p class="z-hero-desc">
+                Premium casual wear crafted for those who live<br />
+                intentionally
+              </p>
+
+              <a class="z-hero-cta" href="../shop/shop.html">EXPLORE COLLECTION</a>
+
+              <!-- <div class="z-hero-scroll">
+                  <span>SCROLL</span>
+                  <i class="z-hero-line"></i>
+                </div> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Scrolling strip -->
+        <div class="z-hero-strip" aria-label="Category ticker">
+          <div class="z-strip-track" id="zStripTrack">
+            <div class="z-strip-group" id="zStripGroup">
+              <div class="z-strip-item">CONSCIOUSLY MADE</div>
+              <div class="z-strip-item">WS 2026</div>
+              <div class="z-strip-item">ZAWQ</div>
+              <div class="z-strip-item">PREMIUM CASUAL</div>
+              <div class="z-strip-item">NATURAL FIBERS</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------------- COLLECTION SECTION -------------------------------->
+      <section class="z-collection" aria-labelledby="z-collection-title">
+        <div class="z-collection-inner">
+          <header class="z-collection-head">
+            <div class="z-collection-kicker">WS26 — NEW ARRIVALS</div>
+            <h2 class="z-collection-title" id="z-collection-title">
+              The Collection
+            </h2>
+          </header>
+
+          <!-- Dynamic cards get injected here by renderHomeCollection(products) -->
+          <div class="z-collection-grid" id="zCollectionGrid"></div>
+        </div>
+      </section>
+      <!----------------- OUR STORY SECTION -------------------------------->
+      <section class="z-philo">
+        <div class="z-philo-media">
+          <img src="../../assets/login.jpeg" alt="Fabric texture" />
+        </div>
+
+        <div class="z-philo-panel">
+          <div class="z-philo-inner">
+            <div class="z-philo-kicker">Our Philosophy</div>
+
+            <h3 class="z-philo-title">
+              Made to be<br />
+              <em>lived in.</em>
+            </h3>
+
+            <p class="z-philo-text">
+              ZAWQ was born from a single belief: that exceptional clothing
+              should feel effortless. We source only the finest natural
+              materials — cashmere from Inner Mongolia, Egyptian cotton,
+              Portuguese linen — and craft each piece to move with you, not
+              against you.
+            </p>
+
+            <p class="z-philo-text z-philo-text--muted">
+              No excess. No noise. Just form, refined.
+            </p>
+
+            <a class="z-philo-btn" href="../about/about.html">OUR STORY</a>
+
+            <div class="z-philo-stats">
+              <div class="z-stat">
+                <div class="z-stat-num">2026</div>
+                <div class="z-stat-label">FOUNDED</div>
+              </div>
+
+              <div class="z-stat">
+                <div class="z-stat-num">12</div>
+                <div class="z-stat-label">MATERIALS</div>
+              </div>
+
+              <div class="z-stat">
+                <div class="z-stat-num">100%</div>
+                <div class="z-stat-label">NATURAL FIBERS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!----------------- NEWSLETTER SECTION -------------------------------->
+      <section class="z-newsletter" aria-label="Newsletter">
+        <div class="z-newsletter-inner">
+          <div class="z-news-kicker">STAY IN THE LOOP</div>
+
+          <h3 class="z-news-title">
+            New arrivals, early access,<br />
+            <em>nothing more.</em>
+          </h3>
+
+          <form class="z-news-form" action="#" method="post">
+            <input class="z-news-input" type="email" name="email" placeholder="Your email address" required />
+            <button class="z-news-btn" type="submit">SUBSCRIBE</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!------------------------------------ FOOTER ------------------------------------------------>
+  
+    <div id="footer"></div>
+
+    <!------------------------------------ JS ------------------------------------------------>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../scripts/products.js"></script>
+  <script src="../../scripts/app.js"></script>
+  <script src="../../scripts/components.js"></script>
+</body>
+
+</html>

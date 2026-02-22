@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ZAWQ | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="./about.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="z-page-about">
+
+    <header>
+        <div id="navbar"></div>
+    </header>
+    <section class="z-philo">
+        <div class="z-philo-media">
+            <img src="../../assets/login.jpeg" alt="Fabric texture" />
+        </div>
+
+        <div class="z-philo-panel">
+            <div class="z-philo-inner">
+                <div class="z-philo-kicker">Our Philosophy</div>
+
+                <h3 class="z-philo-title">
+                    Made to be<br />
+                    <em>lived in.</em>
+                </h3>
+
+                <p class="z-philo-text">
+                    ZAWQ was born from a single belief: that exceptional clothing
+                    should feel effortless. We source only the finest natural
+                    materials — cashmere from Inner Mongolia, Egyptian cotton,
+                    Portuguese linen — and craft each piece to move with you, not
+                    against you.
+                </p>
+
+                <p class="z-philo-text z-philo-text--muted">
+                    No excess. No noise. Just form, refined.
+                </p>
+
+                <div class="z-philo-stats">
+                    <div class="z-stat">
+                        <div class="z-stat-num">2026</div>
+                        <div class="z-stat-label">FOUNDED</div>
+                    </div>
+
+                    <div class="z-stat">
+                        <div class="z-stat-num">12</div>
+                        <div class="z-stat-label">MATERIALS</div>
+                    </div>
+
+                    <div class="z-stat">
+                        <div class="z-stat-num">100%</div>
+                        <div class="z-stat-label">NATURAL FIBERS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/components.js"></script>
+    <script>
+        const LIGHT_LOGO = "../../assets/images/zawq-logo-light.png";
+        ["navbar", "footer"].forEach(id => {
+            new MutationObserver((_, obs) => {
+                const logo = document.getElementById(id)?.querySelector(".brand-logo");
+                if (logo) {
+                    logo.src = LIGHT_LOGO;
+                    obs.disconnect();
+                }
+            }).observe(document.getElementById(id), { childList: true, subtree: true });
+        });
+    </script>
+</body>
+
+</html>
